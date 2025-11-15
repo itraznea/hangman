@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.container {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+header > h1 {
+    font-size: 48px;
+}
+
+.start-game {
+    background-color: #444;
+    color: white;
+    font-size: 48px;
+    border-radius: 15px;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.theword > h2 {
+    font-size: 72px;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(9, auto);
+    margin: 0 auto;
+    width: max-content;
+    gap: 8px;
+}
+
+.keyboard button {
+    width: 80px;
+    height: 80px;
+    border: 2px solid;
+    box-shadow: 0 0 0 2px;
+    font-size: 40px;
+    cursor: pointer;
+    border-radius: 50px;
+    font-weight: bold;
+    background-color: #444;
+    color: white
+}
+
+.action-button {
+    width: 220px;
+    height: 60px;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 15px;
+    border-radius: 25px;
+    background-color: #444;
+    color: white;
+    border: 2px solid;
+}
+
+
+.keyboard button:hover, .action-button:hover, .start-game:hover {
+    background-color: #555;
+}
+
+.keyboard button:active, .action-button:active, .start-game:active {
+    background-color: #777;
+}
+
+.creator {
+    color: #555;
+    font-size: 10px;
+    margin-top: 15px;
+}

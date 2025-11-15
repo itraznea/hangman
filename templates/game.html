@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Hangman</title>
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+
+<main>
+    <div class="container">
+        <div class="structure">
+            <img id="dynamicimg" src="{{ url_for('static', filename='img/structure.png') }}" width="250px" height="350px">
+        </div>
+        <div class="theword">
+            <h2 id="theword"></h2>
+        </div>
+        <div class="keyboard">
+            <button onclick="checkLetter('A', this)" id="A">A</button>
+            <button onclick="checkLetter('B', this)" id="B">B</button>
+            <button onclick="checkLetter('C', this)" id="C">C</button>
+            <button onclick="checkLetter('D', this)" id="D">D</button>
+            <button onclick="checkLetter('E', this)" id="E">E</button>
+            <button onclick="checkLetter('F', this)" id="F">F</button>
+            <button onclick="checkLetter('G', this)" id="G">G</button>
+            <button onclick="checkLetter('H', this)" id="H">H</button>
+            <button onclick="checkLetter('I', this)" id="I">I</button>
+            <button onclick="checkLetter('J', this)" id="J">J</button>
+            <button onclick="checkLetter('K', this)" id="K">K</button>
+            <button onclick="checkLetter('L', this)" id="L">L</button>
+            <button onclick="checkLetter('M', this)" id="M">M</button>
+            <button onclick="checkLetter('N', this)" id="N">N</button>
+            <button onclick="checkLetter('O', this)" id="O">O</button>
+            <button onclick="checkLetter('P', this)" id="P">P</button>
+            <button onclick="checkLetter('Q', this)" id="Q">Q</button>
+            <button onclick="checkLetter('R', this)" id="R">R</button>
+            <button onclick="checkLetter('S', this)" id="S">S</button>
+            <button onclick="checkLetter('T', this)" id="T">T</button>
+            <button onclick="checkLetter('U', this)" id="U">U</button>
+            <button onclick="checkLetter('V', this)" id="V">V</button>
+            <button onclick="checkLetter('W', this)" id="W">W</button>
+            <button onclick="checkLetter('X', this)" id="X">X</button>
+            <button onclick="checkLetter('Y', this)" id="Y">Y</button>
+            <button onclick="checkLetter('Z', this)" id="Z">Z</button>
+        </div>
+        <button class="action-button" onclick="changeDifficulty()">Difficulty</button>
+        <button class="action-button" onclick="restartGame()">Restart</button>
+    </div>
+</main>
+<footer><p class="creator">Created by Ion Traznea</p></footer>
+
+<script>setRandomWord("{{ random_word }}");</script>
+<script src="{{ url_for('static', filename='js/newscripts.js') }}"></script>
+
+{% endblock %}
